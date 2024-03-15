@@ -1,2 +1,2 @@
-# Mini_libc
-⚙️ Implementation of a mini C standard library
+# Mini C standard library
+C project done at School 19

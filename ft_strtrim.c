@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sgardier <sgardier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sgardier <sgardier@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:32:40 by sgardier          #+#    #+#             */
-/*   Updated: 2023/11/01 09:37:31 by sgardier         ###   ########.fr       */
+/*   Updated: 2024/03/17 16:57:15 by sgardier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <unistd.h>
 
 static int	ft_is_in_str(const char *str, size_t str_len, char c)
 {
@@ -50,7 +51,7 @@ static size_t	ft_first_different(char const *str, size_t str_len,
 static size_t	ft_after_last_different(char const *str, size_t str_len,
 		char const *set, size_t set_len)
 {
-	size_t	i;
+	ssize_t	i;
 	size_t	after;
 
 	if (!str)

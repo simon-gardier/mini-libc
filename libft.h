@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sgardier <sgardier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sgardier <sgardier@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:47:37 by sgardier          #+#    #+#             */
-/*   Updated: 2024/03/15 17:34:59 by sgardier         ###   ########.fr       */
+/*   Updated: 2024/03/17 17:05:57 by sgardier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024
 # endif
-# if BUFFER_SIZE > 1000000
-#  undef BUFFER_SIZE
-#  define BUFFER_SIZE 1000000
+
+# ifndef FT_PRINTF_OUT
+#  define FT_PRINTF_OUT 1
 # endif
 
 int		ft_isalpha(int c);
@@ -56,7 +56,14 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
-char	*get_next_line(int fd);
+// ft_printf
 int		ft_printf(const char *format, ...);
+int		ft_print_character(char to_print, int *error);
+int		ft_print_integer(int to_print, int *error);
+int		ft_print_string(char *to_print, int *error);
+int		ft_print_pointer(unsigned long long to_print, int *error);
+int		ft_print_ull(unsigned long long number, int base, char *symbols,
+			int *error);
+// ft_get_next_line
+char	*ft_get_next_line(int fd);
 #endif

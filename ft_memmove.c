@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sgardier <sgardier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sgardier <sgardier@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 23:41:43 by setun             #+#    #+#             */
-/*   Updated: 2023/10/20 20:21:27 by sgardier         ###   ########.fr       */
+/*   Updated: 2024/03/17 16:57:13 by sgardier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 static void	ft_move_before(void *dst, const void *src, size_t len)
 {
@@ -26,7 +27,7 @@ static void	ft_move_before(void *dst, const void *src, size_t len)
 
 static void	ft_move_after(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	ssize_t	i;
 
 	i = len - 1;
 	while (i >= 0)

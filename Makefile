@@ -34,7 +34,10 @@ SRC = 	ft_atoi.c \
 		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
-		ft_toupper.c
+		ft_toupper.c \
+		ft_printf.c \
+		ft_printf_1.c \
+		ft_get_next_line.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -43,8 +46,8 @@ NAME=libft.a
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-%.o: %.c 
-	$(CC) $(CFLAGS) -c $^ -o $@
+%.o: %.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 

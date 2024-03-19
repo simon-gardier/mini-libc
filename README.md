@@ -3,3 +3,6 @@
 ![Language](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge)
 
 C project done at Campus 19
+
+## Credits
+- [Simon Gardier](https://github.com/simon-gardier)

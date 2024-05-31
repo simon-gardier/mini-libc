@@ -1,43 +1,43 @@
 CC=gcc
 CFLAGS=-Wextra -Werror -Wall
 
-SRC = 	ft_atoi.c \
-		ft_bzero.c \
-		ft_calloc.c \
-		ft_isalnum.c \
-		ft_isalpha.c \
-		ft_isascii.c \
-		ft_isdigit.c \
-		ft_isprint.c \
-		ft_itoa.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_memset.c \
-		ft_putchar_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-		ft_putstr_fd.c \
-		ft_split.c \
-		ft_strchr.c \
-		ft_strdup.c \
-		ft_striteri.c \
-		ft_strjoin.c \
-		ft_strlcat.c \
-		ft_strlcpy.c \
-		ft_strlen.c \
-		ft_strmapi.c \
-		ft_strncmp.c \
-		ft_strnstr.c \
-		ft_strrchr.c \
-		ft_strtrim.c \
-		ft_substr.c \
-		ft_tolower.c \
-		ft_toupper.c \
-		ft_printf.c \
-		ft_printf_1.c \
-		ft_get_next_line.c
+SRC = 	./conversion/ft_atoi.c \
+		./memory/ft_bzero.c \
+		./memory/ft_calloc.c \
+		./string/ft_isalnum.c \
+		./string/ft_isalpha.c \
+		./string/ft_isascii.c \
+		./string/ft_isdigit.c \
+		./string/ft_isprint.c \
+		./conversion/ft_itoa.c \
+		./memory/ft_memchr.c \
+		./memory/ft_memcmp.c \
+		./memory/ft_memcpy.c \
+		./memory/ft_memmove.c \
+		./memory/ft_memset.c \
+		./miscellaneous/ft_putchar_fd.c \
+		./miscellaneous/ft_putendl_fd.c \
+		./miscellaneous/ft_putnbr_fd.c \
+		./miscellaneous/ft_putstr_fd.c \
+		./string/ft_split.c \
+		./string/ft_strchr.c \
+		./string/ft_strdup.c \
+		./string/ft_striteri.c \
+		./string/ft_strjoin.c \
+		./string/ft_strlcat.c \
+		./string/ft_strlcpy.c \
+		./string/ft_strlen.c \
+		./string/ft_strmapi.c \
+		./string/ft_strncmp.c \
+		./string/ft_strnstr.c \
+		./string/ft_strrchr.c \
+		./string/ft_strtrim.c \
+		./string/ft_substr.c \
+		./string/ft_tolower.c \
+		./string/ft_toupper.c \
+		./miscellaneous/ft_printf.c \
+		./miscellaneous/ft_printf_1.c \
+		./miscellaneous/ft_get_next_line.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -52,9 +52,9 @@ $(NAME): $(OBJ)
 all: $(NAME)
 
 clean:
-	rm -f $(OBJ)
+	rm -rf $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME) ./a.out
 
 re: fclean all
